@@ -1,0 +1,11 @@
+export const expectedTitleLength: number = 2;
+export const minFullNameLength: number = 1;
+export const minEmailLength: number = 3;
+export const emailSeparator: string = "@";
+export const emailSeparatorInvalid: string = "@@";
+export const emailDot: string = ".";
+export const minPasswordLength: number = 6;
+export const maxPasswordLength: number = 20;
+export const spaceInput: string = " ";
+export const validResult: string = "Valid";
+export const invalidResult: string = "Invalid";

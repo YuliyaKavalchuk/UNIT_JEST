@@ -1,30 +1,19 @@
-export class registrationFormClass {
-    constructor(public title: string, public fullName: string, public email: any, public password: any) {
+export class RegistrationFormClass {
+    constructor(public title: string, public fullName: string, public email: string, public password: string) {
         this.title = title;
         this.fullName = fullName;
         this.email = email;
         this.password = password;
     }
-
-    public titleInput(expectedResult: string) {
-        if (this.title === expectedResult) {
-            return "Valid";
-        } else {
-            return "Invalid";
-        }
-    }
-    public fullNameInput() {
+    public fullNameInput(): string {
         return this.fullName;
     }
 
-    public emailInput() {
+    public emailInput(): string {
         return this.email;
     }
 
-    public passwordInput() {
-        return this.password;
-    }
-    public confirmPasswordInput(expectedResult: any) {
+    public confirmPasswordInput(expectedResult: string) {
         if (this.password === expectedResult) {
             return "Valid";
         } else {

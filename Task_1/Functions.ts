@@ -1,20 +1,20 @@
-export function generateRandomLetterLowerCase() {
-    const alphabet: string = "abcdefghijklmnopqrstuvwxyz";
+import { alphabet, specialChar, emailTemplate } from "./functionsConst";
+
+export function generateRandomLetterLowerCase(): string {
     return alphabet[Math.floor(Math.random() * alphabet.length)];
 }
 
-export function generateRandomLetterUpperCase() {
-    const alphabet: string = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    return alphabet[Math.floor(Math.random() * alphabet.length)];
+export function generateRandomLetterUpperCase(): string {
+    return alphabet.toUpperCase()[Math.floor(Math.random() * alphabet.length)];
 }
 
-export function getRandomInt(min: number, max: number) {
+export function getRandomInt(min: number, max: number): number {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-export function randomString(length: number) {
+export function getrandomString(length: number): string {
     let result: string = "";
-    let characters: string = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+    let characters: string = alphabet + alphabet.toUpperCase();
     let charactersLength: number = characters.length;
     for (let i = 0; i < length; i++) {
         result += characters.charAt(Math.floor(Math.random() * charactersLength));
@@ -22,19 +22,17 @@ export function randomString(length: number) {
     return result;
 }
 
-//
-export function email() {
-    let email: string = "your.email@gmail.com";
-    let emailSplit: any = email.split("@");
+export function getEmail(): string {
+    let emailSplit: any = emailTemplate.split("@");
     return emailSplit[0] + getRandomInt(10000, 99999) + "@" + emailSplit[1];
 }
-export function password() {
+export function getPassword(): string {
     let min: number = 0;
     let max: number = 9;
-    let rand: any = Math.floor(Math.random() * (max - min + 1)) + min;
-    return generateRandomLetterLowerCase() + rand + generateRandomLetterUpperCase() + "<,.(*$/%_-@'!~`:?";
+    let rand: number = Math.floor(Math.random() * (max - min + 1)) + min;
+    return generateRandomLetterLowerCase() + rand + generateRandomLetterUpperCase() + specialChar;
 }
 
-export function fullName() {
-    return randomString(getRandomInt(1, 14)) + " " + randomString(getRandomInt(1, 15));
+export function getFullName(): string {
+    return getrandomString(getRandomInt(1, 14)) + " " + getrandomString(getRandomInt(1, 15));
 }
