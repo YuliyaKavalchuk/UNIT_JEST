@@ -1,5 +1,5 @@
 import { getFullName, getEmail, getPassword } from "../Functions";
-import { RegistrationFormClass } from "../ClassRegistrationForm";
+import { RegistrationFormClass } from "../page/RegistrationFormPage";
 import {
     expectedTitleLength,
     minFullNameLength,
@@ -12,7 +12,7 @@ import {
     maxPasswordLength,
     validResult,
     invalidResult,
-} from "../expectedResultConst";
+} from "../const/expectedResultConst";
 
 const registrationForm: any = new RegistrationFormClass("Ms", getFullName(), getEmail(), getPassword());
 

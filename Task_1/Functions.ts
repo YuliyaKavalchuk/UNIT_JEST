@@ -1,4 +1,4 @@
-import { alphabet, specialChar, emailTemplate } from "./functionsConst";
+import { alphabet, specialChar, emailTemplate } from "./const/functionsConst";
 
 export function generateRandomLetterLowerCase(): string {
     return alphabet[Math.floor(Math.random() * alphabet.length)];
