@@ -1,5 +1,5 @@
-import { getFullName, getEmail, getPassword } from "../Functions";
-import { RegistrationFormClass } from "../page/RegistrationFormPage";
+import { getFullName, getEmail, getPassword } from "../helpers/Functions";
+import { RegistrationFormClass } from "../helpers/RegistrationFormPage";
 import {
     expectedTitleLength,
     minFullNameLength,
