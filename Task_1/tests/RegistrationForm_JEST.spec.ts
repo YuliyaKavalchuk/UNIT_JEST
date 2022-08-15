@@ -24,7 +24,7 @@ describe("Registration Form", () => {
     test("Negative: Check Title is not empty", () => {
         expect(registrationForm.title).not.toBeNull();
     });
-    // Full name
+    // Full Name
     test("Positive: Check Full Name min 1 char.", () => {
         expect(registrationForm.fullNameInput().length).toBeGreaterThanOrEqual(minFullNameLength);
     });
