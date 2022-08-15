@@ -1,5 +1,5 @@
-import { alphabet, specialChar, emailTemplate } from "./const/functionsConst";
-import { emailSeparator, spaceInput } from "./const/expectedResultConst";
+import { alphabet, specialChar, emailTemplate } from "./helpers/constantsForFunctions";
+import { emailSeparator, spaceInput } from "./helpers/expectedResults";
 
 export function generateRandomLetterLowerCase(): string {
     return alphabet[Math.floor(Math.random() * alphabet.length)];

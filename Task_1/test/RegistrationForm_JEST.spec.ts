@@ -12,7 +12,7 @@ import {
     maxPasswordLength,
     validResult,
     invalidResult,
-} from "../const/expectedResultConst";
+} from "../helpers/expectedResults";
 
 const registrationForm: any = new RegistrationFormClass("Ms", getFullName(), getEmail(), getPassword());
 
