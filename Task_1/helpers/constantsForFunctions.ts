@@ -1,3 +1,3 @@
-export const alphabet: string = "abcdefghijklmnopqrstuvwxyz";
-export const special_Char: string = "<,.(*$/%_-@'!~`:?";
-export const email_Template: string = "your.email@gmail.com";
+export const ALPHABET: string = "abcdefghijklmnopqrstuvwxyz";
+export const SPECIAL_CHAR: string = "<,.(*$/%_-@'!~`:?";
+export const EMAIL_TEMPLATE: string = "your.email@gmail.com";
