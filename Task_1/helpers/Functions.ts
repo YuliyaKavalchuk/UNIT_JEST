@@ -1,5 +1,5 @@
-import { alphabet, specialChar, emailTemplate } from "./constantsForFunctions";
-import { emailSeparator, spaceInput } from "./expectedResults";
+import { alphabet, special_Char, email_Template } from "./constantsForFunctions";
+import { email_Separator, space_Input } from "./expectedResults";
 
 export function generateRandomLetterLowerCase(): string {
     return alphabet[Math.floor(Math.random() * alphabet.length)];
@@ -14,7 +14,7 @@ export function getRandomInt(min: number, max: number): number {
 }
 
 export function getRandomString(length: number): string {
-    let result: string = spaceInput;
+    let result: string = space_Input;
     let characters: string = alphabet + alphabet.toUpperCase();
     let charactersLength: number = characters.length;
     for (let i = 0; i < length; i++) {
@@ -24,16 +24,16 @@ export function getRandomString(length: number): string {
 }
 
 export function getEmail(): string {
-    let emailSplit: any = emailTemplate.split(emailSeparator);
-    return emailSplit[0] + getRandomInt(10000, 99999) + emailSeparator + emailSplit[1];
+    let emailSplit: any = email_Template.split(email_Separator);
+    return emailSplit[0] + getRandomInt(10000, 99999) + email_Separator + emailSplit[1];
 }
 export function getPassword(): string {
     let min: number = 0;
     let max: number = 9;
     let rand: number = Math.floor(Math.random() * (max - min + 1)) + min;
-    return generateRandomLetterLowerCase() + rand + generateRandomLetterUpperCase() + specialChar;
+    return generateRandomLetterLowerCase() + rand + generateRandomLetterUpperCase() + special_Char;
 }
 
 export function getFullName(): string {
-    return getRandomString(getRandomInt(1, 14)) + spaceInput + getRandomString(getRandomInt(1, 15));
+    return getRandomString(getRandomInt(1, 14)) + space_Input + getRandomString(getRandomInt(1, 15));
 }
